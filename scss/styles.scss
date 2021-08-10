@@ -1,0 +1,366 @@
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+   .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &__logoContainer{
+            width:50%;
+            margin: auto;
+        }
+
+        &__logo{
+            display: flex;
+            width: 100%;
+            justify-content:center;
+        
+        }
+
+        &__menu{
+            width: 100%;
+            margin-top: 60px;
+            display: block;
+        }
+
+        &__ul{
+            display: flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+        
+    }
+
+    .footerContainer{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly; 
+        &__div{
+            &__ul{
+                display: flex;
+                flex-direction:column;
+                border: 1px black solid; 
+                padding: 0;
+                &__li{
+                    flex: 1;
+                    text-align:center;
+                    
+                }
+            }
+            &__p{
+                display: flex;
+                justify-content:center;
+            }
+        } 
+    }
+
+    ul {
+        list-style-type: none;
+        border: 2px solid #e7e7e8;
+        background-color: #e7e7e8;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    
+    // a {
+    //    /* display: inline;*/
+    //     padding: 12px;
+    // }
+    
+    li a {
+        display: flex;
+        flex-direction:column;
+        font-style: italic;
+        color: rgb(97, 7, 7);
+        text-align: center;
+    }
+
+    .menuNav {
+        display: flex;
+        flex-direction:column;
+        justify-content:center;
+        padding:0;
+    }
+
+    h1{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+    
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .mainContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .description{
+        background-color:#022B3B;
+        text-align: center;
+        line-height: 25px;
+    }
+    
+    .asideSection{
+        margin-top: 1em;
+        display: flex;	
+        flex-direction: column;
+        background-color:#1BB0B8;
+        text-align: center;
+        div{
+            flex: 1;
+        }
+    }
+
+    
+    .blogContainer{
+        margin-top: 1em;
+        background-color:rgb(219, 243, 233);
+        border: 1px solid;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        gap:1em;
+
+        div{
+            text-align: center;
+            padding: 1em;
+            
+        }
+    }
+   
+    section p{
+        color:brown;
+    }
+
+@media only screen and (min-width: 1024px){
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    li a {
+        text-align: right;
+        margin-left: 50px;
+    } 
+    
+    
+    h1{
+        grid-area: titulo;
+        text-align: center;
+        margin-top: 2%;
+        margin-left: 10%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+    }
+    
+    h2{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:white;
+    }
+
+    h3{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color:white;
+    }
+    
+    th, td {
+        width: 25%;
+        text-align: left;
+        vertical-align: top;
+        border: 1px solid #000;
+     }
+    
+     td ol li{
+        display: block;
+     }
+    
+    
+     .header {
+        display: flex;
+        flex-direction:row;
+        justify-content: space-around;
+
+        &__logoContainer{
+            margin-top: 20px;
+            padding:5px;
+            width: 25%;
+        }
+
+        &__logo{
+            width: 50%;
+            margin-left: 50px;      
+        }
+
+        &__menu{
+            margin-top: 60px;
+            display: block;
+        }
+
+        &__ul{
+            display: flex;
+            flex-direction:row;
+            justify-content:center;
+        }
+        
+    }
+    
+    
+    .mainContainer{
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo titulo"
+        "descripcion descripcion cursos"
+        "blog blog blog";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap:5px;
+        grid-row-gap:5px;
+      
+    }
+    
+    .homeTitle{
+        grid-area: titulo;
+    }
+
+    .description{
+        grid-area: descripcion;
+        background-color:#022B3B;
+        align-content: center;
+        line-height: 25px;
+    }
+    
+    .asideSection{
+        grid-area:cursos;
+        display: flex;	
+        flex-direction: column;
+        background-color:#022B3B;
+        text-align: center;
+        margin-top:0;
+    }
+    
+    .asideSection div{
+        flex: 1;
+    }
+    
+    .blogContainer{
+        grid-area: blog;
+        margin-top: 2em;
+        background-color:#022B3B;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    
+    .blogContainer div{
+        margin:2em;
+        text-align: center;
+        padding: 1em;
+        background-color:#1BB0B8;
+    }
+    
+    section p{
+        // color:white;
+        padding: 1.5em;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .blogContainer h3{
+        color:#000;
+    }
+   
+    .blogContainer p{
+        color:#022B3B;
+    }
+    
+    .socialNetwork{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    
+    .socialNetwork img{
+        padding: 1em;
+    }
+
+    .bioContainer{
+
+            display: grid;
+            grid-template-areas: 
+            "titulo titulo"
+            "bio study";
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap:5px;
+            grid-row-gap:5px;
+    }
+
+    .bio p{
+        color: black;
+    }
+    
+    .bioImg{
+        width: 30%;
+        margin:10px;
+    
+    }
+    
+    .studySection{
+        background-color:rgb(248, 252, 229);
+        text-align: left;
+        margin-left: 5%;
+    }
+    
+    
+    .secondMenu ul{
+        display: inline-block;
+    }
+    
+    .courseTable{
+        margin:50px;
+        border: 1px solid;
+        display: block;
+        justify-content:center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    }
+    
+    
+     .servicesContainer{
+        margin: 50px;
+        border-radius: 10px;
+        display: flex;
+        justify-content:center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .servicesContainer div{
+        border: 1px solid;
+        border-radius: 10px;
+        background-color:rgb(232, 241, 237);
+        margin: 10px;
+        text-align: center;
+    }
+    
+    
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        margin: 5px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+
+}
+
